@@ -31,11 +31,14 @@
 	Type definitions
 ******************************************************************************/
 
+/**
+ * \brief The console.
+ */
 typedef struct console
 {
-	char* (*gets)( void );
-	void (*puts)( const char* s );
-	void (*putNum)( const int num );
+	char* (*gets)( void );				/**< Pointer to \ref gets function. */
+	void (*puts)( const char* s );		/**< Pointer to \ref puts function. */
+	void (*putNum)( const int num );	/**< Pointer to \ref putNum function. */
 } console_t;
 
 /******************************************************************************
