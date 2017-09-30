@@ -11,23 +11,20 @@
 #include <stdio.h>
 
 /******************************************************************************
-	Definitions
-******************************************************************************/
-
-static char g_str[ 1000 ];
-
-/******************************************************************************
 	Local function declarations
 ******************************************************************************/
+
 /**
  * \brief Waits until it reads a string from the console.
+ *  
+ * \param[in]	me		The console.
  * 
  * \return The string.
  */
-static char* getString( void )
+static char* getString( console_t* me )
 {
-	gets( g_str );
-	return g_str;
+	scanf( "%s", me->str );
+	return me->str;
 }
 
 /**
